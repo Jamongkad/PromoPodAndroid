@@ -1,7 +1,7 @@
 {
   "name": "PromoPodAndroid",
   "app_id": "",
-  "defaultBrowser": "safari",
+  "defaultBrowser": true,
   "gulpStartupTasks": [
     "sass",
     "watch"

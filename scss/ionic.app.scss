@@ -15,7 +15,75 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
-$calm :  #00BFFF !default;
+$calm : #00BFFF !default;
+
+.list-view { 
+    ion-item {
+        height:140px;
+    }
+
+    ion-item:nth-child(odd) {
+        background: #FAFAFA;
+    }
+
+    ion-item:nth-child(even) {
+        background: #fff;
+    }
+
+    h2.flightName {
+        font-size:20px;
+    }
+
+    .lowerRightInfo {
+        position:absolute;
+        bottom:0;
+        right:0;
+    }
+
+    .small-text {
+        color:#bebebe;
+    }
+
+    .detail {
+        text-align:right; 
+        padding-right:15px;
+        padding-bottom:10px;
+
+       .price {
+           color:#104e8b;
+           font-weight:bold;
+           font-size:17px;
+       }
+
+       .provider {
+            color:#009acd;
+        }
+    }
+}
+
+.group-view {
+    .groupViewSubHeader {
+        height:65px;background-color:#00BFFF;padding-top:10px;padding-left:15px;
+
+        .selectHeader {
+            color:#e5e5e5;    
+        }
+
+        .trips {
+            color:#fafafa;font-weight:bold;font-size:20px    
+        }
+    }
+}
+
+
+
+    ion-view.pane {
+
+    background: #7f8c8d;
+
+    }
+
+
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 

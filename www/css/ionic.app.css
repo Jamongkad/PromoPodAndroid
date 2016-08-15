@@ -15,6 +15,52 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
+.list-view ion-item {
+  height: 140px; }
+
+.list-view ion-item:nth-child(odd) {
+  background: #FAFAFA; }
+
+.list-view ion-item:nth-child(even) {
+  background: #fff; }
+
+.list-view h2.flightName {
+  font-size: 20px; }
+
+.list-view .lowerRightInfo {
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+
+.list-view .small-text {
+  color: #bebebe; }
+
+.list-view .detail {
+  text-align: right;
+  padding-right: 15px;
+  padding-bottom: 10px; }
+  .list-view .detail .price {
+    color: #104e8b;
+    font-weight: bold;
+    font-size: 17px; }
+  .list-view .detail .provider {
+    color: #009acd; }
+
+.group-view .groupViewSubHeader {
+  height: 65px;
+  background-color: #00BFFF;
+  padding-top: 10px;
+  padding-left: 15px; }
+  .group-view .groupViewSubHeader .selectHeader {
+    color: #e5e5e5; }
+  .group-view .groupViewSubHeader .trips {
+    color: #fafafa;
+    font-weight: bold;
+    font-size: 20px; }
+
+ion-view.pane {
+  background: #7f8c8d; }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/

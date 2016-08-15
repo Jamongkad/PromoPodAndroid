@@ -1,7 +1,17 @@
-<ion-view view-title="Promo Pod">
-    <ion-nav-buttons side="secondary">
-    </ion-nav-buttons>
+<ion-view view-title="Promo Pod" class="list-view">
     <ion-content>
-        <h1>Pwets Dude Shiitake Mushrooms</h1>
+        <ion-list>
+            <ion-item ng-repeat="flight in flights" on-tap="openFlight(flight)">
+                <h2 class="flightName">{{flight.displayFlights}}</h2>
+                <p class="small-text">{{flight.numberOfFlights}} flights available</p>
+                <div class="lowerRightInfo">
+                    <p class="detail">
+                        <span class="small-text">lowest promo for</span> 
+                        <span class="price">PHP{{thousands(flight.startingFrom)}}</span><br/>
+                        by <span class="provider">{{flight.cheapestProvider}}</span>
+                    </p>
+                </div>
+            </ion-item>
+        </ion-list>
     </ion-content>
 </ion-view>
