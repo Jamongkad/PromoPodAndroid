@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-.controller('DashCtrl', function($scope, $state, AirFare) {
+.controller('DashCtrl', function($scope, $state, AirFare, Helpers) {
 
     $scope.flights = [];
     AirFare.getGroupedFlights().then(function successCallback(response) {
@@ -13,12 +13,6 @@ angular.module('starter.controllers')
     }
 
     $scope.thousands = function(price) {
-        return numberWithCommas(price);
-    }
-
-    function numberWithCommas(x) {
-        var parts = x.toString().split(".");
-        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        return parts.join(".");
+        return Helpers.numberWithCommas(price);
     }
 });
