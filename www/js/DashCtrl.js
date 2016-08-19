@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-.controller('DashCtrl', function($scope, $state, AirFare, Helpers) {
+.controller('DashCtrl', function($scope, $state, $ionicNativeTransitions, AirFare, Helpers) {
 
     $scope.flights = [];
     AirFare.getGroupedFlights().then(function successCallback(response) {
@@ -10,6 +10,11 @@ angular.module('starter.controllers')
 
     $scope.openFlight = function(flight) {
         $state.go('flights', {'flightId': flight.flights});
+        /*
+        $ionicNativeTransitions.stateGo('flights', {'flightId': flight.flights}, {}, {
+            "type": "fade"
+        });
+        */
     }
 
     $scope.thousands = function(price) {

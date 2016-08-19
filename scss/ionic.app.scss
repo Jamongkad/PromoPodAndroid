@@ -61,17 +61,29 @@ $calm : #00BFFF !default;
     }
 }
 
-.group-view {
+.group-view, .flight-detail-view {
     .groupViewSubHeader {
         height:65px;background-color:#00BFFF;padding-top:10px;padding-left:15px;
+    }
 
-        .selectHeader {
-            color:#e5e5e5;    
-        }
+    .groupViewDarkHeader { 
+        height:65px;background-color:#1495ce;padding-top:10px;padding-left:15px;border-bottom:1px solid #e5e5e5;
+    }
 
-        .trips {
-            color:#fafafa;font-weight:bold;font-size:20px    
+    .flightDetailsHeader { 
+        height:65px;padding-top:10px;padding-left:15px;border-bottom:1px solid #e5e5e5;
+
+        .airlineHeader {
+            font-size: 2.0em;
         }
+    }
+
+    .selectHeader {
+        color:#c0c0c0;    
+    }
+
+    .trips {
+        color:#fafafa;font-weight:bold;font-size:20px    
     }
 }
 

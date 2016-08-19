@@ -46,17 +46,34 @@ $dark:                            #444 !default;
   .list-view .detail .provider {
     color: #009acd; }
 
-.group-view .groupViewSubHeader {
+.group-view .groupViewSubHeader, .flight-detail-view .groupViewSubHeader {
   height: 65px;
   background-color: #00BFFF;
   padding-top: 10px;
   padding-left: 15px; }
-  .group-view .groupViewSubHeader .selectHeader {
-    color: #e5e5e5; }
-  .group-view .groupViewSubHeader .trips {
-    color: #fafafa;
-    font-weight: bold;
-    font-size: 20px; }
+
+.group-view .groupViewDarkHeader, .flight-detail-view .groupViewDarkHeader {
+  height: 65px;
+  background-color: #1495ce;
+  padding-top: 10px;
+  padding-left: 15px;
+  border-bottom: 1px solid #e5e5e5; }
+
+.group-view .flightDetailsHeader, .flight-detail-view .flightDetailsHeader {
+  height: 65px;
+  padding-top: 10px;
+  padding-left: 15px;
+  border-bottom: 1px solid #e5e5e5; }
+  .group-view .flightDetailsHeader .airlineHeader, .flight-detail-view .flightDetailsHeader .airlineHeader {
+    font-size: 2.0em; }
+
+.group-view .selectHeader, .flight-detail-view .selectHeader {
+  color: #c0c0c0; }
+
+.group-view .trips, .flight-detail-view .trips {
+  color: #fafafa;
+  font-weight: bold;
+  font-size: 20px; }
 
 ion-view.pane {
   background: #f0f8ff; }
