@@ -1,0 +1,39 @@
+<ion-view view-title="Flight Detail" class="flight-detail-view">
+    <ion-content>
+        <div class="groupViewDarkHeader">
+            <span class="selectHeader">Departing Flight</span><br/>
+            <span class="trips">
+                {{flightObj.origin_airport}}
+            </span>
+        </div>
+        <div class="groupViewDarkHeader">
+            <span class="selectHeader">Arriving Flight</span><br/>
+            <span class="trips">
+                {{flightObj.destination_airport}}
+            </span>
+        </div>
+        <div class="flightDetailsHeader">
+            <span class="selectHeader">Airline</span><br/>
+            <span class="airlineHeader">
+                <div style="height:3px"></div>
+                {{flightObj.provider_fullname}}
+            </span>
+        </div>
+        <div class="flightDetailsHeader" style="height:130px;!important">
+            <span class="selectHeader">Travel Period</span><br/>
+            <span class="airlineHeader">  
+                <div style="height:3px"></div>
+                <p>{{flightObj.travel_period_from |  amDateFormat:'MMMM D, YYYY'}}</p>
+                <p class="selectHeader" style="font-size:15px">to</p>
+                <p>{{flightObj.travel_period_to | amDateFormat: 'MMMM D, YYYY'}}</p>
+            </span>
+        </div>
+        <div style="float:right;padding-right:10px;padding-top:5px">
+            <span style="color:#c0c0c0;float:right">Price/Person</span>
+            <h1 style="">PHP{{numberWithCommas(flightObj.price)}}.00</h1>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer bar-assertive" style="cursor:pointer" on-tap="goToWebsite()">
+        <h1 class="title">Send!</h1>
+    </div>    
+</ion-view>

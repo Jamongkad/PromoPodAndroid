@@ -1,0 +1,41 @@
+<ion-view view-title="Flight Promos" class="group-view">
+    <ion-content>
+        <div class="groupViewSubHeader">
+            <span class="selectHeader">Select Departure</span><br/>
+            <span class="trips">{{trips}}</span>
+        </div>
+        <div class="row" style="background-color:#fff"> 
+            <div class="col col-25" style="border-right:1px #1d539d solid">
+                <p style="text-align:center">
+                    <span style="font-weight:bold;color:#6F7072">One Way</span><br/>
+                    <span style="font-size:10px;color:#6F7072">price/person </span>
+                </p>
+            </div>
+            <div class="col col-75">
+                <h3 style="text-align:center;color:#6F7072;margin-top:9px">
+                    Airlines 
+                </h3>
+            </div>
+        </div>
+        <div class="row" ng-repeat="flight in groupFlights" 
+                         ng-click="openFlightDetail(flight)"
+                         ng-style="($odd) ? {'background-color': '#fff'} : {'background-color' : '#FAFAFA'}"> 
+            <div class="col col-25" style="border-right:1px #1d539d solid">
+                <p style="text-align:center;font-weight:bold;color:#3364a6;margin-top:35px">
+                    PHP{{numberWithCommas(flight.price)}}
+                </p>
+            </div>
+            <div class="col col-75">
+                <h3 style="color:#1d539d">
+                    {{flight.provider_fullname}} 
+                </h3>
+                <p style="margin-bottom:-1px">
+                    <span style="color:#999999;font-size:12px">Travel Period:</span><br/>
+                    <span style="color:#7f7f7f">
+                        {{flight.travel_period_from |  amDateFormat:'MMM D, YYYY'}} to {{flight.travel_period_to | amDateFormat: 'MMM D, YYYY'}}
+                    </span>
+                </p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
